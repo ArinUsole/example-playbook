@@ -1,0 +1,15 @@
+pipeline {
+    agent {label 'ansible_docker'}
+    stages {
+        stage('Check') {
+            steps {
+                sh 'ansible --version' // выводим версию Ansible, команда sh просто выполнит скрипт из консоли
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'ansible-playbook site.yml'
+            }
+        }
+    }
+}
