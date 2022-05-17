@@ -9,6 +9,6 @@ node("ansible_docker"){
         else{
             echo 'no more keys'
         }
-        
+    CleanWS()
     }
 }
