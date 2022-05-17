@@ -1,6 +1,5 @@
 node("ansible_docker"){
     stage("Git checkout"){
-        CleanWs()
         git url: 'git@github.com:ArinUsole/example-playbook.git'
     }
     stage("Check ssh key"){
